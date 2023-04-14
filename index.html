@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge.chrome=1"/>
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <center> <font size="10" font color="purple">Kalkulator</font> </center>
+
+
+    <form name="a">
+        <br/> <br/>
+        Podaj pierwsza liczbe: <input  type ="text" name="liczba1"/> <br/>
+        Podaj drugą liczbe: <input type="text" name="liczba2"/> <br/> <Br/>
+        <input type="button" onclick="dodaj();" value="Dodaj"/>
+        <input type="button" onclick="odejmij();" value="Odejmij"/>
+        <input type="button" onclick="pomnoz();" value="Pomnoz"/>
+        <input type="button" onclick="podziel();" value="Podziel"/>
+        <input type="button" onclick="reszta();" value="Wyświetl resztę z dzielenia"/> 
+        <input type="button" onclick="potegowanie();" value="Poteguj"/> <Br/> <Br/> <Br/>
+        Wynik to: <input type="text" name="wynik"/>
+
+    </form>
+
+    <script>
+        function dodaj()
+        {
+            document.a.wynik.value=parseInt(document.a.liczba1.value)+parseInt(document.a.liczba2.value);
+            if (document.a.wynik.value =="NaN")
+            {
+                document.a.wynik.value=""
+                alert("Wyrażenie nie zrozumiane")
+            }
+        }
+        function odejmij()
+        {
+            document.a.wynik.value=parseInt(document.a.liczba1.value)-parseInt(document.a.liczba2.value);
+            if (document.a.wynik.value =="NaN")
+            {
+                document.a.wynik.value=""
+                alert("Wyrażenie nie zrozumiane")
+            }
+        }
+        function pomnoz()
+        {
+            document.a.wynik.value=parseInt(document.a.liczba1.value)*parseInt(document.a.liczba2.value);
+            if (document.a.wynik.value =="NaN")
+            {
+                document.a.wynik.value=""
+                alert("Wyrażenie nie zrozumiane")
+            }
+        }
+        function podziel()
+        {
+            document.a.wynik.value=parseInt(document.a.liczba1.value)/parseInt(document.a.liczba2.value);
+            if (document.a.wynik.value =="NaN")
+            {
+                document.a.wynik.value=""
+                alert("Wyrażenie nie zrozumiane")
+            }
+        }
+        function reszta()
+        {
+            document.a.wynik.value=parseInt(document.a.liczba1.value)%parseInt(document.a.liczba2.value);
+        if (document.a.wynik.value =="NaN")
+            {
+                document.a.wynik.value=""
+                alert("Wyrażenie nie zrozumiane")
+            }
+        }
+        function potegowanie()
+        {
+            document.a.wynik.value=parseInt(document.a.liczba1.value)**parseInt(document.a.liczba2.value);
+        if (document.a.wynik.value =="NaN")
+            {
+                document.a.wynik.value=""
+                alert("Wyrażenie nie zrozumiane")
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>
